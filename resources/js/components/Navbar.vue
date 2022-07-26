@@ -9,7 +9,7 @@
     </div>
         <ul v-if="!mobileView || mobileView && navOpen " :class="mobileView ? 'mobile_list' : 'nav_list'">
             <li v-for="type in shoeTypes" :key="type">
-               <a href="">{{type}} <span v-if="mobileView"> <i v-if="mobileView" class="fas fa-chevron-right arrow"></i></span></a>
+               <a v-bind:href="route('products.index')">{{type}} <span v-if="mobileView"> <i v-if="mobileView" class="fas fa-chevron-right arrow"></i></span></a>
             </li>
             <li>
                 <i class="fas fa-search"></i>
@@ -19,6 +19,7 @@
 </template>
 
 <script>
+
     export default {
         data() {
             return {
@@ -86,13 +87,19 @@
     max-width: 420px;
     position: absolute;
     left: 0;
-    top: 4rem;
+    top: 4.1rem;
     li {
         height: 64px;
         border-bottom: 1px solid #e7e7e7;
         background: #f7f7f7;
         padding: 22px 30px 0 30px;
         position: relative;
+    }
+    li:hover {
+        cursor: pointer;
+    }
+    a:hover {
+        color: black;
     }
     .arrow {
         position: absolute;

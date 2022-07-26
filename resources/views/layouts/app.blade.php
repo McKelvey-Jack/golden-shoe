@@ -13,12 +13,13 @@
             body {
                 font-family: 'Nunito', sans-serif;
             }
-        </style>
+            </style>
+    @routes
     </head>
     <body class="antialiased">
         <div id="app">
+            <navbar></navbar>
             @yield('content')
         </div>
-        @routes
     </body>
 </html>
