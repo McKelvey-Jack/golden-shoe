@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="{{ mix('js/app.js') }}" defer></script>
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        <script src="https://kit.fontawesome.com/94ae44446c.js" crossorigin="anonymous"></script>
 
         <title>Golden Shoe</title>
         <!-- Styles -->
@@ -18,6 +19,6 @@
         <div id="app">
             @yield('content')
         </div>
+        @routes
     </body>
-    @routes
 </html>
