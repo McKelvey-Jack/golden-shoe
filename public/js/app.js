@@ -5897,9 +5897,9 @@ var render = function render() {
 
   return _c("div", [_c("h1", {
     staticClass: "header"
-  }, [_vm._v(" Mens Shoes")]), _vm._v(" "), _c("section", {
+  }, [_vm._v(" Mens Shoes")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c("section", {
     staticClass: "products_list_container"
-  }, [_vm._m(0), _vm._v(" "), _c("div", {
+  }, [_c("div", {
     staticClass: "product_list_outer"
   }, [_c("ul", {
     staticClass: "product_list"
@@ -14017,7 +14017,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".header[data-v-f94d305c] {\n  width: 100%;\n  text-align: center;\n  font-size: 2rem;\n  margin-top: 1rem;\n}\n.filters_container[data-v-f94d305c] {\n  background-color: #e0e0e0;\n  padding: 0px 4px;\n  margin: 0px 4px;\n}\n.filters_container .filter_button[data-v-f94d305c] {\n  padding: 4px 8px;\n  margin: 6px 0px;\n  border-top: 1px solid rgba(189, 189, 189, 0.7019607843);\n  border-bottom: 1px solid rgba(189, 189, 189, 0.7019607843);\n  border-left: none;\n  border-right: none;\n  background: none;\n  color: gray;\n}\n.filters_container .filter_button .icon[data-v-f94d305c] {\n  margin-left: 6px;\n}\n.products_list_container[data-v-f94d305c] {\n  width: 100%;\n  padding: 0 1rem 3rem;\n}\n.products_list_container .product_list_outer[data-v-f94d305c] {\n  height: 100%;\n  margin: 0 auto;\n  max-width: 576px;\n  width: 100%;\n}\n.products_list_container .product_list_outer .product_list li[data-v-f94d305c] {\n  width: calc(50% - 8px);\n  display: inline-block;\n  margin: 8px 4px;\n}\n.products_list_container .product_list_outer .product_list .image_container[data-v-f94d305c] {\n  max-width: 100%;\n}\n.products_list_container .product_list_outer .product_list .image_container img[data-v-f94d305c] {\n  max-width: 100%;\n}\n.products_list_container .product_list_outer .product_list .product_name[data-v-f94d305c] {\n  font-size: 0.9rem;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".header[data-v-f94d305c] {\n  width: 100%;\n  text-align: center;\n  font-size: 2rem;\n  margin-top: 1rem;\n}\n.filters_container[data-v-f94d305c] {\n  background-color: #e4e4e4;\n  padding: 4px 16px;\n}\n.filters_container .filter_button[data-v-f94d305c] {\n  padding: 4px 8px;\n  margin: 6px 0px;\n  border-top: 1px solid rgba(189, 189, 189, 0.7019607843);\n  border-bottom: 1px solid rgba(189, 189, 189, 0.7019607843);\n  border-left: none;\n  border-right: none;\n  background: none;\n  color: gray;\n}\n.filters_container .filter_button .icon[data-v-f94d305c] {\n  margin-left: 6px;\n}\n.products_list_container[data-v-f94d305c] {\n  width: 100%;\n  padding: 0 1rem 3rem;\n}\n.product_list_outer[data-v-f94d305c] {\n  height: 100%;\n  margin: 0 auto;\n  max-width: 576px;\n  width: 100%;\n}\n.product_list li[data-v-f94d305c] {\n  width: calc(50% - 8px);\n  display: inline-block;\n  margin: 8px 4px;\n}\n.product_list .image_container[data-v-f94d305c] {\n  max-width: 100%;\n}\n.product_list .image_container img[data-v-f94d305c] {\n  max-width: 100%;\n}\n.product_list .product_name[data-v-f94d305c] {\n  font-size: 0.9rem;\n}\n@media screen and (min-width: 1204px) {\n.product_list li[data-v-f94d305c] {\n    width: calc(25% - 12px);\n    margin-left: 12px;\n}\n.product_list li[data-v-f94d305c]:nth-of-type(4n + 1) {\n    margin-left: 0;\n}\n.product_list li[data-v-f94d305c]:nth-of-type(4n) {\n    margin-right: 0;\n}\n.product_list_outer[data-v-f94d305c] {\n    max-width: 1366px;\n}\n}\n@media screen and (min-width: 768px) and (max-width: 1203px) {\n.product_list li[data-v-f94d305c] {\n    width: calc(33.333% - 8px);\n    margin-left: 12px;\n}\n.product_list li[data-v-f94d305c]:nth-of-type(3n + 1) {\n    margin-left: 0;\n}\n.product_list li[data-v-f94d305c]:nth-of-type(n) {\n    margin-right: 0;\n}\n.product_list_outer[data-v-f94d305c] {\n    max-width: 1366px;\n}\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

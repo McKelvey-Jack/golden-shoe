@@ -1,11 +1,11 @@
 <template>
     <div>
         <h1 class="header"> Mens Shoes</h1>
+        <div class="filters_container">
+            <button class="filter_button">Sort <span><i class="fas fa-chevron-down icon"></i></span></button>
+            <button class="filter_button">Filter<span><i class="fas fa-chevron-down icon"></i></span></button>
+        </div>
         <section class="products_list_container">
-            <div class="filters_container">
-                <button class="filter_button">Sort <span><i class="fas fa-chevron-down icon"></i></span></button>
-                <button class="filter_button">Filter<span><i class="fas fa-chevron-down icon"></i></span></button>
-            </div>
             <div class="product_list_outer">
                 <ul class="product_list">
                     <li class="product_list_item" v-for="product in products" :key="product.id">
@@ -66,9 +66,8 @@
 }
 
 .filters_container {
-    background-color:#e0e0e0;
-    padding: 0px 4px;
-    margin: 0px 4px;
+    background-color:#e4e4e4;
+    padding: 4px 16px;
     .filter_button {
         padding: 4px 8px;
         margin: 6px 0px;
@@ -87,30 +86,65 @@
 .products_list_container {
     width: 100%;
     padding: 0 1rem 3rem;
-    .product_list_outer {
-        height: 100%;
-        margin: 0 auto;
-        max-width: 576px;
-        width: 100%;
-        .product_list {
-            li {
-                width: calc(50% - 8px);
-                display: inline-block;
-                margin: 8px 4px;
-            } 
-            .image_container {
-                max-width: 100%;
-                img {
-                    max-width: 100%;
-                }
-            }
-            .product_name {
-                font-size: .9rem;
-            }
+}
+.product_list_outer {
+    height: 100%;
+    margin: 0 auto;
+    max-width: 576px;
+    width: 100%;
+}
+.product_list {
+    li {
+        width: calc(50% - 8px);
+        display: inline-block;
+        margin: 8px 4px;
+    } 
+    .image_container {
+        max-width: 100%;
+        img {
+            max-width: 100%;
         }
+    }
+    .product_name {
+        font-size: .9rem;
     }
 }
 
 
+@media screen and (min-width: 1204px) {
+    .product_list {
+        li {
+            width: calc(25% - 12px);
+            margin-left: 12px;
+        }
+        li:nth-of-type(4n + 1) {
+            margin-left: 0;
+        }
+        li:nth-of-type(4n) {
+            margin-right: 0;
+        }
+    }
+    .product_list_outer {
+        max-width: 1366px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width:1203px) {
+    .product_list {
+        li {
+            width: calc(33.333% - 8px);
+            margin-left: 12px;
+        }
+        li:nth-of-type(3n + 1) {
+            margin-left: 0;
+        }
+        li:nth-of-type(n) {
+            margin-right: 0;
+        }
+    }
+    .product_list_outer {
+        max-width: 1366px;
+    }
+}
 
 </style>

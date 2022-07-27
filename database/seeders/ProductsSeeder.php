@@ -50,7 +50,37 @@ class ProductsSeeder extends Seeder
             'type' => 'men',
             'list_image' => 1,
             'price' => 24.99,
-        ]
+        ],
+        [
+            'name' => 'Shoe 7',
+            'type' => 'men',
+            'list_image' => 1,
+            'price' => 24.99,
+         ],
+         [
+            'name' => 'Shoe 7',
+            'type' => 'men',
+            'list_image' => 1,
+            'price' => 24.99,
+         ],
+         [
+            'name' => 'Shoe 8',
+            'type' => 'men',
+            'list_image' => 1,
+            'price' => 24.99,
+         ],
+         [
+            'name' => 'Shoe 9',
+            'type' => 'men',
+            'list_image' => 1,
+            'price' => 24.99,
+         ],
+         [
+            'name' => 'Shoe 10',
+            'type' => 'men',
+            'list_image' => 1,
+            'price' => 24.99,
+         ]
     ];
     /**
      * Run the database seeds.
