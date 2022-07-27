@@ -18,68 +18,70 @@ class ProductsSeeder extends Seeder
         [
             'name' => 'Shoe 2',
             'type' => 'men',
-            'list_image' => 1,
-            'price' => 24.99,
+            'list_image' => 2,
+            'price' => 19.99,
         ],
         [
             'name' => 'Shoe 3',
             'type' => 'men',
-            'list_image' => 1,
-            'price' => 24.99,
+            'list_image' => 3,
+            'price' => 65.99,
+
         ],
         [
             'name' => 'Shoe 4',
             'type' => 'men',
-            'list_image' => 1,
+            'list_image' => 4,
             'price' => 24.99,
         ],
         [
             'name' => 'Shoe 5',
             'type' => 'men',
             'list_image' => 1,
-             'price' => 24.99,
+            'price' => 27.99,
         ],
         [
             'name' => 'Shoe 6',
             'type' => 'men',
-            'list_image' => 1,
-            'price' => 24.99,
+            'list_image' => 2,
+            'price' => 22.99,
         ],
         [
             'name' => 'Shoe 7',
             'type' => 'men',
-            'list_image' => 1,
-            'price' => 24.99,
+            'list_image' => 3,
+            'price' => 29.99,
+
         ],
         [
             'name' => 'Shoe 7',
             'type' => 'men',
-            'list_image' => 1,
-            'price' => 24.99,
+            'list_image' => 4,
+            'price' => 22.99,
          ],
          [
             'name' => 'Shoe 7',
             'type' => 'men',
-            'list_image' => 1,
+            'list_image' => 4,
             'price' => 24.99,
          ],
          [
             'name' => 'Shoe 8',
             'type' => 'men',
-            'list_image' => 1,
-            'price' => 24.99,
+            'list_image' => 2,
+            'price' => 27.99,
          ],
          [
             'name' => 'Shoe 9',
             'type' => 'men',
-            'list_image' => 1,
+            'list_image' => 4,
             'price' => 24.99,
          ],
          [
             'name' => 'Shoe 10',
             'type' => 'men',
-            'list_image' => 1,
-            'price' => 24.99,
+            'list_image' => 3,
+            'price' => 29.99,
          ]
     ];
     /**
@@ -89,7 +91,9 @@ class ProductsSeeder extends Seeder
      */
     public function run()
     {
-        foreach($this->products as $product) { 
+        foreach($this->products as $product) {
+            $details = [1 => 'test', 2 => 'test'];
+            $product['details'] = json_encode($details);
             Product::create($product);
         }
     }

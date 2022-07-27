@@ -5774,7 +5774,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ['id']
+  props: ['id'],
+  methods: {
+    getProduct: function getProduct() {
+      var _this = this;
+
+      Vue.axios.get(route('get_product', {
+        id: this.id
+      })).then(function (_ref) {
+        var data = _ref.data;
+        _this.productData = data;
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.getProduct();
+  }
 });
 
 /***/ }),
@@ -5963,10 +5978,78 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div");
+  return _vm._m(0);
 };
 
-var staticRenderFns = [];
+var staticRenderFns = [function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div", [_c("div", {
+    staticClass: "carousel slide",
+    attrs: {
+      id: "carousel",
+      "data-interval": "false"
+    }
+  }, [_c("div", {
+    staticClass: "carousel-inner",
+    attrs: {
+      "data-interval": "false"
+    }
+  }, [_c("div", {
+    staticClass: "carousel-item active"
+  }, [_c("img", {
+    staticClass: "d-block w-100 img-responsive",
+    attrs: {
+      src: "https://source.unsplash.com/random/100x80?sig=1",
+      alt: "..."
+    }
+  })]), _vm._v(" "), _c("div", {
+    staticClass: "carousel-item"
+  }, [_c("img", {
+    staticClass: "d-block w-100 img-responsive",
+    attrs: {
+      src: "https://source.unsplash.com/random/100x80?sig=2",
+      alt: "..."
+    }
+  })]), _vm._v(" "), _c("div", {
+    staticClass: "carousel-item"
+  }, [_c("img", {
+    staticClass: "d-block w-100 img-responsive",
+    attrs: {
+      src: "https://source.unsplash.com/random/100x80?sig=3",
+      alt: "..."
+    }
+  })])]), _vm._v(" "), _c("button", {
+    staticClass: "carousel-control-prev",
+    attrs: {
+      type: "button",
+      "data-bs-target": "#carousel",
+      "data-bs-slide": "prev"
+    }
+  }, [_c("span", {
+    staticClass: "carousel-control-prev-icon",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  }), _vm._v(" "), _c("span", {
+    staticClass: "visually-hidden"
+  }, [_vm._v("Previous")])]), _vm._v(" "), _c("button", {
+    staticClass: "carousel-control-next",
+    attrs: {
+      type: "button",
+      "data-bs-target": "#carousel",
+      "data-bs-slide": "next"
+    }
+  }, [_c("span", {
+    staticClass: "carousel-control-next-icon",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  }), _vm._v(" "), _c("span", {
+    staticClass: "visually-hidden"
+  }, [_vm._v("Next")])])])]);
+}];
 render._withStripped = true;
 
 
