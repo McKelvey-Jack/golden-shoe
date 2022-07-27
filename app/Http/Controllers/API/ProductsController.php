@@ -29,7 +29,7 @@ class ProductsController extends Controller
     public function getProduct(request $request, int $id) 
     {
         $product_stock = Stock::where('product_id', $id)->join('sizes', 'sizes.id', 'stock.size_id')->select('sizes.name as size', 'stock.quantity')->get();
-        $product_info = Product::where('id', $id)->select('details', 'name')->first();
+        $product_info = Product::where('id', $id)->select('details', 'name', 'price')->first();
         
 
         $data = [

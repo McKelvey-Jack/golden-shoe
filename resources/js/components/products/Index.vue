@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div v-if="!loading">
         <h1 class="header"> Mens Shoes</h1>
         <div class="filters_container">
             <button class="filter_button">Sort <span><i class="fas fa-chevron-down icon"></i></span></button>
@@ -35,7 +35,7 @@
         data() {
             return {
                 products: null,
-                
+                loading: true,                
             }
         },
         methods: {
@@ -46,6 +46,10 @@
                     }
                 }).then(({data})=>{
                     this.products = data
+                }).catch((err)=>{
+                    console.log(err)
+                }).finally(()=>{
+                    this.loading = false
                 })
             }
         },
