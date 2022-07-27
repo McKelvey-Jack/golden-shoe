@@ -22,7 +22,7 @@
             <label class="size_label" for="">size:</label>
             <select class="size_select" name="" id="">
                 <option value="">Please Select</option>
-                <option v-for="item in productData.stock" 
+                <option :disabled="item.quantity === 0" v-for="item in productData.stock" 
                     :key="item.size" 
                     value="">{{item.size}} 
                     <span v-if="item.quantity === 0">Out Of Stock</span> 
@@ -30,6 +30,16 @@
             </select>
         </div>
         <button type="button" class="btn btn-success add_to_basket_button">Add to Basket</button>
+        <div class="size_guide">
+            <p>Size Help:</p>
+            <p>Unsure on size? <span class="size_guide_link"> find your recommended size</span></p>
+        </div>
+    </div>
+    <div class="product_details">
+        <h2>Product Details</h2>
+        <ol class="product_details_list">
+            <li v-for="(value, key) in productData.info.details" :key="key">{{value}}</li>
+        </ol>
     </div>
 </div>
 </template>
@@ -96,6 +106,32 @@
 .price {
     font-size: 1.2rem;
 }
+
+.size_guide {
+    width: 100%;
+    margin: 1rem 0rem;
+    .size_guide_link {
+        text-decoration: underline;
+    }
+    .size_guide_link:hover {
+        cursor: pointer;
+    }
+    p {
+        margin-bottom: 4px
+    }
+}
+
+.product_details {
+    margin: 4px 8px;
+    .product_details_list {
+        width: 100%;
+        li {
+            list-style: disc;
+            margin-left: 2rem;
+        }
+    }
+}
+
 
 
 </style>

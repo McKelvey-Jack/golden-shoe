@@ -6044,6 +6044,7 @@ var render = function render() {
     return _c("option", {
       key: item.size,
       attrs: {
+        disabled: item.quantity === 0,
         value: ""
       }
     }, [_vm._v(_vm._s(item.size) + " \n                    "), item.quantity === 0 ? _c("span", [_vm._v("Out Of Stock")]) : _vm._e()]);
@@ -6052,7 +6053,15 @@ var render = function render() {
     attrs: {
       type: "button"
     }
-  }, [_vm._v("Add to Basket")])])]) : _vm._e();
+  }, [_vm._v("Add to Basket")]), _vm._v(" "), _vm._m(2)]), _vm._v(" "), _c("div", {
+    staticClass: "product_details"
+  }, [_c("h2", [_vm._v("Product Details")]), _vm._v(" "), _c("ol", {
+    staticClass: "product_details_list"
+  }, _vm._l(_vm.productData.info.details, function (value, key) {
+    return _c("li", {
+      key: key
+    }, [_vm._v(_vm._s(value))]);
+  }), 0)])]) : _vm._e();
 };
 
 var staticRenderFns = [function () {
@@ -6093,6 +6102,15 @@ var staticRenderFns = [function () {
   }), _vm._v(" "), _c("span", {
     staticClass: "visually-hidden"
   }, [_vm._v("Next")])]);
+}, function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div", {
+    staticClass: "size_guide"
+  }, [_c("p", [_vm._v("Size Help:")]), _vm._v(" "), _c("p", [_vm._v("Unsure on size? "), _c("span", {
+    staticClass: "size_guide_link"
+  }, [_vm._v(" find your recommended size")])])]);
 }];
 render._withStripped = true;
 
@@ -14120,7 +14138,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".nav_bar[data-v-6dde423b] {\n  display: flex;\n  align-items: baseline;\n  border-bottom: 1px solid gray;\n}\n.brand_name[data-v-6dde423b] {\n  font-size: 1.2rem;\n  color: maroon;\n}\n.logo_container[data-v-6dde423b] {\n  height: 4rem;\n  display: flex;\n  align-items: center;\n  min-width: 120px;\n}\n.burger[data-v-6dde423b] {\n  background: none;\n  outline: none;\n  border: none;\n  font-size: 2rem;\n  min-width: 50px;\n}\n.mobile_list[data-v-6dde423b] {\n  display: flex;\n  flex-direction: column;\n  min-width: 320px;\n  max-width: 420px;\n  position: absolute;\n  left: 0;\n  top: 4.1rem;\n}\n.mobile_list li[data-v-6dde423b] {\n  height: 64px;\n  border-bottom: 1px solid #e7e7e7;\n  background: #f7f7f7;\n  padding: 22px 30px 0 30px;\n  position: relative;\n}\n.mobile_list li[data-v-6dde423b]:hover {\n  cursor: pointer;\n}\n.mobile_list a[data-v-6dde423b]:hover {\n  color: black;\n}\n.mobile_list .arrow[data-v-6dde423b] {\n  position: absolute;\n  right: 10px;\n}\n.nav_list[data-v-6dde423b] {\n  display: flex;\n  justify-content: space-around;\n  height: 100%;\n  width: 100%;\n  align-items: center;\n}\n.nav_list a[data-v-6dde423b]:hover {\n  color: maroon;\n}\nli[data-v-6dde423b]:hover {\n  cursor: pointer;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".nav_bar[data-v-6dde423b] {\n  display: flex;\n  align-items: baseline;\n  border-bottom: 1px solid gray;\n}\n.brand_name[data-v-6dde423b] {\n  font-size: 1.2rem;\n  color: maroon;\n}\n.logo_container[data-v-6dde423b] {\n  height: 4rem;\n  display: flex;\n  align-items: center;\n  min-width: 120px;\n}\n.burger[data-v-6dde423b] {\n  background: none;\n  outline: none;\n  border: none;\n  font-size: 2rem;\n  min-width: 50px;\n}\n.mobile_list[data-v-6dde423b] {\n  display: flex;\n  flex-direction: column;\n  min-width: 320px;\n  max-width: 420px;\n  position: absolute;\n  left: 0;\n  top: 4.1rem;\n  z-index: 1;\n}\n.mobile_list li[data-v-6dde423b] {\n  height: 64px;\n  border-bottom: 1px solid #e7e7e7;\n  background: #f7f7f7;\n  padding: 22px 30px 0 30px;\n  position: relative;\n}\n.mobile_list li[data-v-6dde423b]:hover {\n  cursor: pointer;\n}\n.mobile_list a[data-v-6dde423b]:hover {\n  color: black;\n}\n.mobile_list .arrow[data-v-6dde423b] {\n  position: absolute;\n  right: 10px;\n}\n.nav_list[data-v-6dde423b] {\n  display: flex;\n  justify-content: space-around;\n  height: 100%;\n  width: 100%;\n  align-items: center;\n}\n.nav_list a[data-v-6dde423b]:hover {\n  color: maroon;\n}\nli[data-v-6dde423b]:hover {\n  cursor: pointer;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -14168,7 +14186,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".aside_content[data-v-4c5e34ad] {\n  margin: 4px 8px;\n}\n.aside_content h1[data-v-4c5e34ad] {\n  margin-top: 1rem;\n}\n.size_section[data-v-4c5e34ad] {\n  margin: 1rem 0rem;\n}\n.size_section .size_label[data-v-4c5e34ad] {\n  text-transform: uppercase;\n  font-weight: 900;\n}\n.size_section .size_select[data-v-4c5e34ad] {\n  padding: 2px 6px;\n  border-color: rgba(189, 189, 189, 0.7019607843);\n  width: 100%;\n  margin-top: 4px;\n}\n.size_section .size_select[data-v-4c5e34ad]:focus-visible {\n  outline: none;\n}\n.add_to_basket_button[data-v-4c5e34ad] {\n  width: 100%;\n  margin-top: 1rem;\n}\n.price[data-v-4c5e34ad] {\n  font-size: 1.2rem;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".aside_content[data-v-4c5e34ad] {\n  margin: 4px 8px;\n}\n.aside_content h1[data-v-4c5e34ad] {\n  margin-top: 1rem;\n}\n.size_section[data-v-4c5e34ad] {\n  margin: 1rem 0rem;\n}\n.size_section .size_label[data-v-4c5e34ad] {\n  text-transform: uppercase;\n  font-weight: 900;\n}\n.size_section .size_select[data-v-4c5e34ad] {\n  padding: 2px 6px;\n  border-color: rgba(189, 189, 189, 0.7019607843);\n  width: 100%;\n  margin-top: 4px;\n}\n.size_section .size_select[data-v-4c5e34ad]:focus-visible {\n  outline: none;\n}\n.add_to_basket_button[data-v-4c5e34ad] {\n  width: 100%;\n  margin-top: 1rem;\n}\n.price[data-v-4c5e34ad] {\n  font-size: 1.2rem;\n}\n.size_guide[data-v-4c5e34ad] {\n  width: 100%;\n  margin: 1rem 0rem;\n}\n.size_guide .size_guide_link[data-v-4c5e34ad] {\n  text-decoration: underline;\n}\n.size_guide p[data-v-4c5e34ad] {\n  margin-bottom: 4px;\n}\n.product_details[data-v-4c5e34ad] {\n  margin: 4px 8px;\n}\n.product_details .product_details_list[data-v-4c5e34ad] {\n  width: 100%;\n}\n.product_details .product_details_list li[data-v-4c5e34ad] {\n  list-style: disc;\n  margin-left: 2rem;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
