@@ -4,11 +4,18 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+
+import Vue from 'vue';
+import axios from "axios";
+import VueAxios from "vue-axios";
+import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue';
 require('./bootstrap');
 
 window.Vue = require('vue').default;
 
-import Vue from 'vue';
+Vue.use(VueAxios, axios);
+Vue.use(ZiggyVue)
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -20,12 +27,11 @@ import Vue from 'vue';
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue';
 
-Vue.use(ZiggyVue)
 Vue.component('home', require('./components/Home.vue').default);
 Vue.component('navbar', require('./components/Navbar.vue').default);
 Vue.component('products-index', require('./components/products/Index.vue').default);
+Vue.component('products-show', require('./components/products/Show.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

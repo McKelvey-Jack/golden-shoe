@@ -11,31 +11,45 @@ class ProductsSeeder extends Seeder
     protected $products = [
         [
             'name' => 'Shoe 1',
-            'type' => 'male',
+            'type' => 'men',
+            'list_image' => 1,
+            'price' => 24.99,
         ],
         [
             'name' => 'Shoe 2',
-            'type' => 'male',
+            'type' => 'men',
+            'list_image' => 1,
+            'price' => 24.99,
         ],
         [
             'name' => 'Shoe 3',
-            'type' => 'male',
+            'type' => 'men',
+            'list_image' => 1,
+            'price' => 24.99,
         ],
         [
             'name' => 'Shoe 4',
-            'type' => 'male',
+            'type' => 'men',
+            'list_image' => 1,
+            'price' => 24.99,
         ],
         [
             'name' => 'Shoe 5',
-            'type' => 'male',
+            'type' => 'men',
+            'list_image' => 1,
+             'price' => 24.99,
         ],
         [
             'name' => 'Shoe 6',
-            'type' => 'male',
+            'type' => 'men',
+            'list_image' => 1,
+            'price' => 24.99,
         ],
         [
             'name' => 'Shoe 7',
-            'type' => 'male',
+            'type' => 'men',
+            'list_image' => 1,
+            'price' => 24.99,
         ]
     ];
     /**
