@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
             $table->foreignId('product_id')->constrained('products');
-            $table->integer('true_to_size_value')->nullable()->default(null);
+            $table->integer('true_to_size_value');
             $table->integer('stars');
             
         });

@@ -24,6 +24,11 @@ class ReviewsSeeder extends Seeder
             'true_to_size_value' => '7',
             'stars' => 4
         ],
+        [
+            'product_id' => '1',
+            'true_to_size_value' => '7',
+            'stars' => 4
+        ],
     ];
     /**
      * Run the database seeds.

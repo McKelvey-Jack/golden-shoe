@@ -92,7 +92,7 @@ class ProductsSeeder extends Seeder
     public function run()
     {
         foreach($this->products as $product) {
-            $details = [1 => 'test', 2 => 'test'];
+            $details = [1 => 'Lace-up fastening', 2 => 'Round toe', 3 => 'Flat sole', 4 => 'Brogue detailing'];
             $product['details'] = json_encode($details);
             Product::create($product);
         }

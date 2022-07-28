@@ -1,5 +1,5 @@
 <template>
-<div v-if="!loading">
+<div class="page_container" v-if="!loading">
     <div id="carousel" class="carousel slide" data-interval="false" >
     <div class="carousel-inner" data-interval="false" >
         <div :class="{active : index === 0}" class="carousel-item" v-for="(image, index) in images" :key="image">
@@ -35,17 +35,22 @@
             <p>Unsure on size? <span class="size_guide_link"> find your recommended size</span></p>
         </div>
     </div>
-    <div class="product_details">
-        <h2>Product Details</h2>
-        <ol class="product_details_list">
-            <li v-for="(value, key) in productData.info.details" :key="key">{{value}}</li>
-        </ol>
-    </div>
+        <div class="product_details">
+            <h2>Product Details</h2>
+            <ol class="product_details_list">
+                <li v-for="(value, key) in productData.info.details" :key="key">{{value}}</li>
+            </ol>
+        </div>
+        <reviews class="reviews" v-if="reviewData" 
+            :reviewData="reviewData"> 
+        </reviews>
 </div>
 </template>
 
 <script>
+import Reviews from './Reviews.vue'
     export default {
+        components: {Reviews},
         props: ['id'],
         data() {
             return {
@@ -67,7 +72,7 @@
                 })
             },
             getReviews() {
-                Vue.axios.get(route('get_reviews'), {id: this.id})
+                Vue.axios.get(route('get_reviews', {id: this.id}))
                 .then(({data})=>{
                     this.reviewData = data
                 }).catch((err)=>{
@@ -86,7 +91,7 @@
 <style lang="scss" scoped>
 
 .aside_content {
-    margin: 4px 8px;
+    margin: 1rem;
     h1 {
         margin-top: 1rem;
     }
@@ -132,7 +137,7 @@
 }
 
 .product_details {
-    margin: 4px 8px;
+    margin: 1rem;
     .product_details_list {
         width: 100%;
         li {
@@ -142,6 +147,17 @@
     }
 }
 
+
+@media screen and (min-width: 768px) {
+   .page_container {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     max-width: 1000px;
+     margin: 0 auto;
+     row-gap: 1rem;
+     padding: 1rem;
+   }
+}
 
 
 </style>
