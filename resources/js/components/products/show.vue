@@ -52,6 +52,7 @@
                 productData: null,
                 images: ['black-1', 'black-2', 'black-3', 'black-4'],
                 loading: true,
+                reviewData: null
             }
         },
         methods: {
@@ -64,10 +65,19 @@
                 }).finally(()=>{
                     this.loading = false
                 })
+            },
+            getReviews() {
+                Vue.axios.get(route('get_reviews'), {id: this.id})
+                .then(({data})=>{
+                    this.reviewData = data
+                }).catch((err)=>{
+                    console.log(err)
+                })
             }
         },
         mounted() {
             this.getProduct()
+            this.getReviews()
         }
         
     }

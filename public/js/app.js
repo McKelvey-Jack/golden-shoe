@@ -5784,7 +5784,8 @@ __webpack_require__.r(__webpack_exports__);
     return {
       productData: null,
       images: ['black-1', 'black-2', 'black-3', 'black-4'],
-      loading: true
+      loading: true,
+      reviewData: null
     };
   },
   methods: {
@@ -5801,10 +5802,23 @@ __webpack_require__.r(__webpack_exports__);
       })["finally"](function () {
         _this.loading = false;
       });
+    },
+    getReviews: function getReviews() {
+      var _this2 = this;
+
+      Vue.axios.get(route('get_reviews'), {
+        id: this.id
+      }).then(function (_ref2) {
+        var data = _ref2.data;
+        _this2.reviewData = data;
+      })["catch"](function (err) {
+        console.log(err);
+      });
     }
   },
   mounted: function mounted() {
     this.getProduct();
+    this.getReviews();
   }
 });
 
@@ -14186,7 +14200,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".aside_content[data-v-4c5e34ad] {\n  margin: 4px 8px;\n}\n.aside_content h1[data-v-4c5e34ad] {\n  margin-top: 1rem;\n}\n.size_section[data-v-4c5e34ad] {\n  margin: 1rem 0rem;\n}\n.size_section .size_label[data-v-4c5e34ad] {\n  text-transform: uppercase;\n  font-weight: 900;\n}\n.size_section .size_select[data-v-4c5e34ad] {\n  padding: 2px 6px;\n  border-color: rgba(189, 189, 189, 0.7019607843);\n  width: 100%;\n  margin-top: 4px;\n}\n.size_section .size_select[data-v-4c5e34ad]:focus-visible {\n  outline: none;\n}\n.add_to_basket_button[data-v-4c5e34ad] {\n  width: 100%;\n  margin-top: 1rem;\n}\n.price[data-v-4c5e34ad] {\n  font-size: 1.2rem;\n}\n.size_guide[data-v-4c5e34ad] {\n  width: 100%;\n  margin: 1rem 0rem;\n}\n.size_guide .size_guide_link[data-v-4c5e34ad] {\n  text-decoration: underline;\n}\n.size_guide p[data-v-4c5e34ad] {\n  margin-bottom: 4px;\n}\n.product_details[data-v-4c5e34ad] {\n  margin: 4px 8px;\n}\n.product_details .product_details_list[data-v-4c5e34ad] {\n  width: 100%;\n}\n.product_details .product_details_list li[data-v-4c5e34ad] {\n  list-style: disc;\n  margin-left: 2rem;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".aside_content[data-v-4c5e34ad] {\n  margin: 4px 8px;\n}\n.aside_content h1[data-v-4c5e34ad] {\n  margin-top: 1rem;\n}\n.size_section[data-v-4c5e34ad] {\n  margin: 1rem 0rem;\n}\n.size_section .size_label[data-v-4c5e34ad] {\n  text-transform: uppercase;\n  font-weight: 900;\n}\n.size_section .size_select[data-v-4c5e34ad] {\n  padding: 2px 6px;\n  border-color: rgba(189, 189, 189, 0.7019607843);\n  width: 100%;\n  margin-top: 4px;\n}\n.size_section .size_select[data-v-4c5e34ad]:focus-visible {\n  outline: none;\n}\n.add_to_basket_button[data-v-4c5e34ad] {\n  width: 100%;\n  margin-top: 1rem;\n}\n.price[data-v-4c5e34ad] {\n  font-size: 1.2rem;\n}\n.size_guide[data-v-4c5e34ad] {\n  width: 100%;\n  margin: 1rem 0rem;\n}\n.size_guide .size_guide_link[data-v-4c5e34ad] {\n  text-decoration: underline;\n}\n.size_guide .size_guide_link[data-v-4c5e34ad]:hover {\n  cursor: pointer;\n}\n.size_guide p[data-v-4c5e34ad] {\n  margin-bottom: 4px;\n}\n.product_details[data-v-4c5e34ad] {\n  margin: 4px 8px;\n}\n.product_details .product_details_list[data-v-4c5e34ad] {\n  width: 100%;\n}\n.product_details .product_details_list li[data-v-4c5e34ad] {\n  list-style: disc;\n  margin-left: 2rem;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

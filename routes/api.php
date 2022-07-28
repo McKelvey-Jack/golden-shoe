@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\ProductsController;
+use App\Http\Controllers\API\ReviewsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('get-products', [ProductsController::class, 'getProducts'])->name('get_products');
 Route::get('get-product/{id}', [ProductsController::class, 'getProduct'])->name('get_product');
+Route::get('get-reviews/{id}', [ReviewsController::class, 'getReviews'])->name('get_reviews');
