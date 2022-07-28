@@ -19,6 +19,11 @@ class ReviewsController extends Controller
     public function getReviews(Request $request, int $id)
     {
         $review_data = Review::where('product_id', $id)->select('stars', 'true_to_size_value')->get();
+
+        if ($review_data->isEmpty()) { 
+            return response(null);
+        }
+
         $formatted_data = $this->reviewsService->formatReviewData($review_data);
 
         return response($formatted_data);

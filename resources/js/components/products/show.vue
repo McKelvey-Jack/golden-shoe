@@ -35,22 +35,41 @@
             <p>Unsure on size? <span class="size_guide_link"> find your recommended size</span></p>
         </div>
     </div>
+    <div class="details_and_rating">
         <div class="product_details">
-            <h2>Product Details</h2>
+            <h3 class="header">Product Details</h3>
             <ol class="product_details_list">
                 <li v-for="(value, key) in productData.info.details" :key="key">{{value}}</li>
             </ol>
         </div>
-        <reviews class="reviews" v-if="reviewData" 
-            :reviewData="reviewData"> 
-        </reviews>
+        <div class="customer_rating">
+            <h3 class="header">Customer Rating</h3>
+            <div class="size_slider">
+                <slider
+                    :header="'Size'"
+                    :leftLabel="'Runs Small'"
+                    :rightLabel="'Runs Large'"
+                    :value="reviewData.true_to_size_slider_value">
+                </slider>
+            </div>
+        </div>
+    </div>
+    <div class="reviews">
+            <h3 class="header">Reviews</h3>
+            <slider v-for="(item) in sortedStarsCount"
+                :key="item[0]"
+                :leftLabel="getStarsLeftLabel(item[0])"
+                :rightLabel="`(${item[1]})`"
+                :value="item[1] / reviewData.total_reviews * 100">
+            </slider>
+    </div>
 </div>
 </template>
 
 <script>
-import Reviews from './Reviews.vue'
+import Slider from '../Slider.vue'
     export default {
-        components: {Reviews},
+        components: {Slider},
         props: ['id'],
         data() {
             return {
@@ -78,6 +97,17 @@ import Reviews from './Reviews.vue'
                 }).catch((err)=>{
                     console.log(err)
                 })
+            },
+            getStarsLeftLabel(key) {
+                let label = `${key} Star`
+                if (key != 1) label += 's'
+                console.log(label)
+                return label
+            }
+        },
+        computed: {
+            sortedStarsCount(){
+               return Object.entries(this.reviewData.stars_count).sort((a,b) => b[0]-a[0])
             }
         },
         mounted() {
@@ -135,9 +165,12 @@ import Reviews from './Reviews.vue'
         margin-bottom: 4px
     }
 }
+.details_and_rating {
+    margin: 1rem;
+}
 
 .product_details {
-    margin: 1rem;
+    margin: 1rem 0rem;
     .product_details_list {
         width: 100%;
         li {
@@ -147,17 +180,39 @@ import Reviews from './Reviews.vue'
     }
 }
 
+.reviews{
+    margin: 1rem;
+    padding-top: 6px;
+    border-top: 1px solid #bdbdbdb3
+}
+
+.header {
+    margin: .5rem 0rem 1rem
+}
+
+.customer_rating {
+    margin: 1rem 0rem;
+}
 
 @media screen and (min-width: 768px) {
    .page_container {
-     display: grid;
-     grid-template-columns: 1fr 1fr;
-     max-width: 1000px;
-     margin: 0 auto;
-     row-gap: 1rem;
-     padding: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 1000px;
+        margin: 0 auto;
+        row-gap: 1rem;
+        padding: 1rem;
+   }
+   .reviews {
+        padding-top: 0px;
+        border: none;
+   }
+   .product_details {
+        margin: 0rem;
+   }
+   .customer_rating {
+     margin: 0rem;
    }
 }
-
 
 </style>
