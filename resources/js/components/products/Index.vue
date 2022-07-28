@@ -10,7 +10,7 @@
                 <ul class="product_list">
                     <li class="product_list_item" v-for="product in products" :key="product.id">
                         <div class="image_container">
-                            <a :href="route('products.show', product.id)">
+                            <a :href="route('products.show', 1)">
                                 <img :src="`/assets/${product.list_image_path}.jpeg`" alt="product_image">
                             </a>
                         </div>

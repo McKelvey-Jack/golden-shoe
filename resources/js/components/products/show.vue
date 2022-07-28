@@ -1,20 +1,6 @@
 <template>
 <div class="page_container" v-if="!loading">
-    <div id="carousel" class="carousel slide" data-interval="false" >
-    <div class="carousel-inner" data-interval="false" >
-        <div :class="{active : index === 0}" class="carousel-item" v-for="(image, index) in images" :key="image">
-                <img :src="`/assets/${image}.jpeg`" class="d-block w-100 img-responsive" alt="...">
-        </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-    </div>
+    <images-carousel :images="productData.images"></images-carousel>
     <div class="aside_content">
         <h1>{{productData.info.name}}</h1>
         <p class="price">£{{productData.info.price}}</p>
@@ -68,13 +54,14 @@
 
 <script>
 import Slider from '../Slider.vue'
+import ImagesCarousel from '../ImagesCarousel.vue'
+
     export default {
-        components: {Slider},
+        components: {Slider, ImagesCarousel},
         props: ['id'],
         data() {
             return {
                 productData: null,
-                images: ['black-1', 'black-2', 'black-3', 'black-4'],
                 loading: true,
                 reviewData: null
             }
@@ -101,7 +88,6 @@ import Slider from '../Slider.vue'
             getStarsLeftLabel(key) {
                 let label = `${key} Star`
                 if (key != 1) label += 's'
-                console.log(label)
                 return label
             }
         },
@@ -209,9 +195,6 @@ import Slider from '../Slider.vue'
    }
    .product_details {
         margin: 0rem;
-   }
-   .customer_rating {
-     margin: 0rem;
    }
 }
 

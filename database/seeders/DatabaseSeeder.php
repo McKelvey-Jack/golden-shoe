@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             SizesSeeder::class,
             StockSeeder::class,
             ReviewsSeeder::class,
+            ProductImagesSeeder::class,
         ]);
     }
 }

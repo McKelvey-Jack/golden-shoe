@@ -18,6 +18,9 @@ class ImagesSeeder extends Seeder
         [
             'path' => 'black-3',
         ],
+        [
+            'path' => 'black-4',
+        ],
     ];
     /**
      * Run the database seeds.
