@@ -5676,7 +5676,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      saleLinks: [{
+        name: 'mens',
+        image: 'black-1'
+      }, {
+        name: 'womens',
+        image: 'black-2'
+      }, {
+        name: 'kids',
+        image: 'black-3'
+      }]
+    };
+  }
+});
 
 /***/ }),
 
@@ -5893,7 +5908,28 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _vm._m(0);
+  return _c("div", {
+    staticClass: "home_container"
+  }, [_vm._m(0), _vm._v(" "), _c("div", {
+    staticClass: "sale_links"
+  }, _vm._l(_vm.saleLinks, function (item) {
+    return _c("div", {
+      key: item.name,
+      staticClass: "sale_section_container"
+    }, [_c("a", {
+      attrs: {
+        href: _vm.route("products.show", 1)
+      }
+    }, [_c("img", {
+      staticClass: "sale_image",
+      attrs: {
+        src: "/assets/".concat(item.image, ".jpeg"),
+        alt: "product_image"
+      }
+    })]), _vm._v(" "), _c("h2", {
+      staticClass: "sale_section_header"
+    }, [_vm._v("Shop " + _vm._s(item.name))])]);
+  }), 0)]);
 };
 
 var staticRenderFns = [function () {
@@ -5901,8 +5937,6 @@ var staticRenderFns = [function () {
       _c = _vm._self._c;
 
   return _c("div", {
-    staticClass: "home_container"
-  }, [_c("div", {
     staticClass: "sale_banner_container"
   }, [_c("img", {
     staticClass: "sale_image",
@@ -5910,30 +5944,7 @@ var staticRenderFns = [function () {
       src: "/assets/sale-image.jpeg",
       alt: ""
     }
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "sale_links"
-  }, [_c("div", {
-    staticClass: "sale_section_container"
-  }, [_c("h2", [_vm._v("Shop Mens")]), _vm._v(" "), _c("div", [_c("img", {
-    attrs: {
-      src: "/assets/black-2.jpeg",
-      alt: ""
-    }
-  })])]), _vm._v(" "), _c("div", {
-    staticClass: "sale_section_container"
-  }, [_c("h2", [_vm._v("Shop Womens")]), _vm._v(" "), _c("div", [_c("img", {
-    attrs: {
-      src: "/assets/black-2.jpeg",
-      alt: ""
-    }
-  })])]), _vm._v(" "), _c("div", {
-    staticClass: "sale_section_container"
-  }, [_c("h2", [_vm._v("Shop Kids")]), _vm._v(" "), _c("div", [_c("img", {
-    attrs: {
-      src: "/assets/black-2.jpeg",
-      alt: ""
-    }
-  })])])])]);
+  })]);
 }];
 render._withStripped = true;
 
@@ -14338,7 +14349,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".home_container[data-v-f2b6376c] {\n  max-width: 800px;\n  margin: 0 auto;\n}\n.sale_banner_container img[data-v-f2b6376c] {\n  height: auto;\n  width: 100%;\n}\n.sale_image[data-v-f2b6376c] {\n  width: 100%;\n  height: auto;\n}\n.sale_section_container img[data-v-f2b6376c] {\n  height: auto;\n  width: 100%;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".home_container[data-v-f2b6376c] {\n  max-width: 800px;\n  margin: 0 auto;\n}\n.sale_banner_container[data-v-f2b6376c] {\n  margin-bottom: 1rem;\n}\n.sale_banner_container img[data-v-f2b6376c] {\n  height: auto;\n  width: 100%;\n}\n.sale_section_header[data-v-f2b6376c] {\n  text-align: center;\n}\n.sale_section_header[data-v-f2b6376c]:hover {\n  color: maroon;\n  cursor: pointer;\n  text-transform: capitalize;\n}\n.sale_image[data-v-f2b6376c] {\n  width: 100%;\n  height: auto;\n}\n@media screen and (min-width: 576px) {\n.sale_links[data-v-f2b6376c] {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    gap: 1rem;\n    margin: 1rem;\n}\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
