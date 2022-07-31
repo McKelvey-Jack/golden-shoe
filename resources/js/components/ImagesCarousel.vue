@@ -6,12 +6,10 @@
         </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
+         <i class="fas fa-arrow-left arrow" aria-hidden="true"></i>
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
+        <i class="fas fa-arrow-right arrow" aria-hidden="true"></i>
     </button>
     </div>
 </template>
@@ -23,5 +21,10 @@
 </script>
 
 <style lang="scss" scoped>
+
+.arrow {
+    color: black;
+    font-size: 1rem;
+}
 
 </style>

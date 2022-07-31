@@ -5,7 +5,7 @@
         </div>
         <div class="sale_links">
             <div class="sale_section_container" v-for="item in saleLinks" :key="item.name">
-                    <a :href="route('products.show', 1)">
+                    <a :href="route('products.index')">
                         <img class="sale_image" :src="`/assets/${item.image}.jpeg`" alt="product_image">
                     </a>
                 <h2 class="sale_section_header">Shop {{item.name}}</h2>
@@ -45,12 +45,12 @@
 
 .sale_section_header {
     text-align: center;
+    text-transform: capitalize;
 }
 
 .sale_section_header:hover {
     color: maroon;
     cursor: pointer;
-    text-transform: capitalize;
 }
 
 .sale_image {
