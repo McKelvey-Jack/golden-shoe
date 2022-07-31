@@ -35,7 +35,8 @@
                     :header="'Size'"
                     :leftLabel="'Runs Small'"
                     :rightLabel="'Runs Large'"
-                    :value="reviewData.true_to_size_slider_value">
+                    :value="reviewData.true_to_size_slider_value"
+                    :floatingBar="true">
                 </slider>
             </div>
         </div>
@@ -46,7 +47,8 @@
                 :key="item[0]"
                 :leftLabel="getStarsLeftLabel(item[0])"
                 :rightLabel="`(${item[1]})`"
-                :value="item[1] / reviewData.total_reviews * 100">
+                :value="item[1] / reviewData.total_reviews * 100"
+                :floatingBar="false">
             </slider>
     </div>
 </div>

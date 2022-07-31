@@ -5768,7 +5768,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ['header', 'leftLabel', 'rightLabel', 'value']
+  props: ['header', 'leftLabel', 'rightLabel', 'value', 'floatingBar'],
+  computed: {
+    barPosition: function barPosition() {
+      if (this.floatingBar) {
+        return "left:".concat(this.value, "%");
+      } else {
+        return "width:".concat(this.value, "%");
+      }
+    }
+  }
 });
 
 /***/ }),
@@ -6132,7 +6141,7 @@ var render = function render() {
     staticClass: "slider_box_container"
   }, [_c("div", {
     staticClass: "slider_box",
-    style: "left:".concat(_vm.value, "%;")
+    style: _vm.barPosition
   })]), _vm._v(" "), _c("div", {
     staticClass: "labels"
   }, [_c("p", [_vm._v(_vm._s(_vm.leftLabel))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(_vm.rightLabel))])])]);
@@ -6291,7 +6300,8 @@ var render = function render() {
       header: "Size",
       leftLabel: "Runs Small",
       rightLabel: "Runs Large",
-      value: _vm.reviewData.true_to_size_slider_value
+      value: _vm.reviewData.true_to_size_slider_value,
+      floatingBar: true
     }
   })], 1)])]), _vm._v(" "), _c("div", {
     staticClass: "reviews"
@@ -6303,7 +6313,8 @@ var render = function render() {
       attrs: {
         leftLabel: _vm.getStarsLeftLabel(item[0]),
         rightLabel: "(".concat(item[1], ")"),
-        value: item[1] / _vm.reviewData.total_reviews * 100
+        value: item[1] / _vm.reviewData.total_reviews * 100,
+        floatingBar: false
       }
     });
   })], 2)], 1) : _vm._e();
@@ -14393,7 +14404,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".nav_bar[data-v-6dde423b] {\n  display: flex;\n  align-items: baseline;\n  border-bottom: 1px solid gray;\n}\n.brand_name[data-v-6dde423b] {\n  font-size: 1.2rem;\n  color: maroon;\n}\n.logo_container[data-v-6dde423b] {\n  height: 4rem;\n  display: flex;\n  align-items: center;\n  min-width: 120px;\n}\n.burger[data-v-6dde423b] {\n  background: none;\n  outline: none;\n  border: none;\n  font-size: 2rem;\n  min-width: 50px;\n}\n.mobile_list[data-v-6dde423b] {\n  display: flex;\n  flex-direction: column;\n  width: 75%;\n  position: absolute;\n  left: 0;\n  top: 4.1rem;\n  z-index: 1;\n}\n.mobile_list .list_item[data-v-6dde423b] {\n  height: 64px;\n  border-bottom: 1px solid #e7e7e7;\n  background: #f7f7f7;\n  padding: 22px 30px 0 30px;\n  position: relative;\n  display: block;\n}\n.mobile_list li[data-v-6dde423b]:hover {\n  cursor: pointer;\n}\n.mobile_list a[data-v-6dde423b]:hover {\n  color: black;\n}\n.mobile_list .arrow[data-v-6dde423b] {\n  position: absolute;\n  right: 10px;\n}\n.nav_list[data-v-6dde423b] {\n  display: flex;\n  justify-content: space-around;\n  height: 100%;\n  width: 100%;\n  align-items: center;\n}\n.nav_list a[data-v-6dde423b]:hover {\n  color: maroon;\n}\nli[data-v-6dde423b]:hover {\n  cursor: pointer;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".nav_bar[data-v-6dde423b] {\n  display: flex;\n  align-items: baseline;\n  border-bottom: 1px solid gray;\n}\n.brand_name[data-v-6dde423b] {\n  font-size: 1.2rem;\n  color: maroon;\n}\n.logo_container[data-v-6dde423b] {\n  height: 4rem;\n  display: flex;\n  align-items: center;\n  min-width: 120px;\n}\n.burger[data-v-6dde423b] {\n  background: none;\n  outline: none;\n  border: none;\n  font-size: 2rem;\n  min-width: 50px;\n}\n.mobile_list[data-v-6dde423b] {\n  display: flex;\n  flex-direction: column;\n  width: 75%;\n  position: absolute;\n  left: 0;\n  top: 4.1rem;\n  z-index: 2;\n}\n.mobile_list .list_item[data-v-6dde423b] {\n  height: 64px;\n  border-bottom: 1px solid #e7e7e7;\n  background: #f7f7f7;\n  padding: 22px 30px 0 30px;\n  position: relative;\n  display: block;\n}\n.mobile_list li[data-v-6dde423b]:hover {\n  cursor: pointer;\n}\n.mobile_list a[data-v-6dde423b]:hover {\n  color: black;\n}\n.mobile_list .arrow[data-v-6dde423b] {\n  position: absolute;\n  right: 10px;\n}\n.nav_list[data-v-6dde423b] {\n  display: flex;\n  justify-content: space-around;\n  height: 100%;\n  width: 100%;\n  align-items: center;\n}\n.nav_list a[data-v-6dde423b]:hover {\n  color: maroon;\n}\nli[data-v-6dde423b]:hover {\n  cursor: pointer;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

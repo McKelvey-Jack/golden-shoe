@@ -18,7 +18,7 @@ class DatabaseConnectionTest extends TestCase
     {
         $PDO = DB::getPdo();
         $DB_name = DB::connection()->getDatabaseName();
-        $this->assertIsObject($PDO);
-        $this->assertEquals($DB_name, 'golden_shoe');
+        $this->assertIsObject($PDO); // This tests for a database connection. This will return a PDO object if there is a connection and an error if not.
+        $this->assertEquals($DB_name, 'golden_shoe'); 
     }
 }

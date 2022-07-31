@@ -87,7 +87,7 @@
     position: absolute;
     left: 0;
     top: 4.1rem;
-    z-index: 1;
+    z-index: 2;
     .list_item{
         height: 64px;
         border-bottom: 1px solid #e7e7e7;

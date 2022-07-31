@@ -2,7 +2,7 @@
     <div class="slider">
         <h4 v-if="header" class="header">{{header}}:</h4>
         <div class="slider_box_container">
-            <div class="slider_box" :style="`left:${value}%;`"></div>
+            <div class="slider_box" :style="barPosition"></div>
         </div>
         <div class="labels">
             <p>{{leftLabel}}</p>
@@ -13,7 +13,16 @@
 
 <script>
     export default {
-        props: ['header','leftLabel', 'rightLabel', 'value']
+        props: ['header','leftLabel', 'rightLabel', 'value', 'floatingBar'],
+        computed: {
+            barPosition() {
+                if (this.floatingBar) {
+                    return `left:${this.value}%`
+                } else {
+                    return `width:${this.value}%`
+                }
+            }
+        }
     }
 </script>
 
