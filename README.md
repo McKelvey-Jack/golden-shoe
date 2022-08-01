@@ -4,7 +4,8 @@ This Project is built using Laravel, Vue.js and Postgres
 
 To get Started you will need to:
 
-* Run composer install
+* Run ```composer install```
+* Run ```npm i```
 * Create a .env file
 * Connect to a database
 * Run ```php artisan migrate``` and ``` php artisan db::seed ```
