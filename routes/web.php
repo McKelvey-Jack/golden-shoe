@@ -17,4 +17,4 @@ use App\Http\Controllers\HomeController;
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::resource('products', PhotoController::class)->except('edit', 'destroy', 'store', 'edit', 'update');
+Route::resource('products', ProductsController::class)->except('edit', 'destroy', 'store', 'edit', 'update');

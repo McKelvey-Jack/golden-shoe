@@ -14,7 +14,7 @@ class ProductsController extends Controller
      */
     public function index()
     {
-
+        return view('products/index');
     }
 
     /**
@@ -25,6 +25,6 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('products/show')->with('id', $id);
     }
 }

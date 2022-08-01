@@ -1,4 +1,5 @@
 const mix = require('laravel-mix');
+const path = require('path')
 
 /*
  |--------------------------------------------------------------------------
@@ -11,6 +12,16 @@ const mix = require('laravel-mix');
  |
  */
 
+mix.webpackConfig({
+    resolve: {
+        alias: {
+             ziggy: path.resolve("vendor/tightenco/ziggy/dist/vue"),
+        },
+    },
+});
+mix.copyDirectory('resources/assets', 'public/assets');
+
 mix.js('resources/js/app.js', 'public/js')
     .vue()
     .sass('resources/sass/app.scss', 'public/css');
+

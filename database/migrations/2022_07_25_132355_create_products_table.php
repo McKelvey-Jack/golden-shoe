@@ -17,6 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('type');
+            $table->decimal('price', 6,2);
+            $table->json('details');
         });
     }
 

@@ -9,4 +9,8 @@ class Product extends Model
 {
     public $timestamps = false;
     use HasFactory;
+
+    public function getDetailsAttribute($value) {
+        return json_decode($value);
+    }
 }

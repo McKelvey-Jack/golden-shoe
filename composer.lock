@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "84b1f2122933f23bdd57cfa5b5828d9d",
+    "content-hash": "4b491f43f9958d9abef6899e725452fc",
     "packages": [
         {
             "name": "brick/math",
@@ -894,17 +894,59 @@
             "time": "2022-06-20T21:43:11+00:00"
         },
         {
-            "name": "laravel/framework",
-            "version": "v9.21.6",
+            "name": "kesmenenver/servicelayer",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/laravel/framework.git",
-                "reference": "569d7a2e361895f90e66bb4e02db89c27691a0e7"
+                "url": "https://github.com/EnverKESMEN/l5-service-layer.git",
+                "reference": "1f73f6f597bc55626b3008f53b98ff95c86e7acd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/569d7a2e361895f90e66bb4e02db89c27691a0e7",
-                "reference": "569d7a2e361895f90e66bb4e02db89c27691a0e7",
+                "url": "https://api.github.com/repos/EnverKESMEN/l5-service-layer/zipball/1f73f6f597bc55626b3008f53b98ff95c86e7acd",
+                "reference": "1f73f6f597bc55626b3008f53b98ff95c86e7acd",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "KesmenEnver\\ServiceLayer\\ServiceLayerServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "KesmenEnver\\ServiceLayer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Enver KESMEN",
+                    "email": "kesmenenver@gmail.com"
+                }
+            ],
+            "description": "The Service Layer is a design pattern that will help you to abstract your logic when you need to use different front-end on your application, for your domain logic",
+            "support": {
+                "issues": "https://github.com/EnverKESMEN/l5-service-layer/issues",
+                "source": "https://github.com/EnverKESMEN/l5-service-layer/tree/master"
+            },
+            "time": "2018-06-05T11:59:21+00:00"
+        },
+        {
+            "name": "laravel/framework",
+            "version": "v9.22.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/framework.git",
+                "reference": "b3b3dd43b9899f23df6d1d3e5390bd4662947a46"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/b3b3dd43b9899f23df6d1d3e5390bd4662947a46",
+                "reference": "b3b3dd43b9899f23df6d1d3e5390bd4662947a46",
                 "shasum": ""
             },
             "require": {
@@ -1071,7 +1113,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-07-22T14:16:44+00:00"
+            "time": "2022-07-26T16:16:33+00:00"
         },
         {
             "name": "laravel/sanctum",
@@ -1516,16 +1558,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "3.1.1",
+            "version": "3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "1a941703dfb649f9b821e7bc425e782f576a805e"
+                "reference": "ed0ecc7f9b5c2f4a9872185846974a808a3b052a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/1a941703dfb649f9b821e7bc425e782f576a805e",
-                "reference": "1a941703dfb649f9b821e7bc425e782f576a805e",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/ed0ecc7f9b5c2f4a9872185846974a808a3b052a",
+                "reference": "ed0ecc7f9b5c2f4a9872185846974a808a3b052a",
                 "shasum": ""
             },
             "require": {
@@ -1586,7 +1628,7 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem/issues",
-                "source": "https://github.com/thephpleague/flysystem/tree/3.1.1"
+                "source": "https://github.com/thephpleague/flysystem/tree/3.2.0"
             },
             "funding": [
                 {
@@ -1602,7 +1644,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-07-18T09:59:40+00:00"
+            "time": "2022-07-26T07:26:36+00:00"
         },
         {
             "name": "league/mime-type-detection",
@@ -1764,16 +1806,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.59.1",
+            "version": "2.60.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "a9000603ea337c8df16cc41f8b6be95a65f4d0f5"
+                "reference": "00a259ae02b003c563158b54fb6743252b638ea6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/a9000603ea337c8df16cc41f8b6be95a65f4d0f5",
-                "reference": "a9000603ea337c8df16cc41f8b6be95a65f4d0f5",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/00a259ae02b003c563158b54fb6743252b638ea6",
+                "reference": "00a259ae02b003c563158b54fb6743252b638ea6",
                 "shasum": ""
             },
             "require": {
@@ -1862,7 +1904,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-06-29T21:43:55+00:00"
+            "time": "2022-07-27T15:57:48+00:00"
         },
         {
             "name": "nette/schema",
@@ -5630,16 +5672,16 @@
         },
         {
             "name": "laravel/pint",
-            "version": "v1.0.0",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/pint.git",
-                "reference": "df89c86ce4515f28b70feaf9ad59e8c3bdb888fd"
+                "reference": "16cccd66169f926308fefb21ddbc03a261ca7e79"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/pint/zipball/df89c86ce4515f28b70feaf9ad59e8c3bdb888fd",
-                "reference": "df89c86ce4515f28b70feaf9ad59e8c3bdb888fd",
+                "url": "https://api.github.com/repos/laravel/pint/zipball/16cccd66169f926308fefb21ddbc03a261ca7e79",
+                "reference": "16cccd66169f926308fefb21ddbc03a261ca7e79",
                 "shasum": ""
             },
             "require": {
@@ -5692,7 +5734,7 @@
                 "issues": "https://github.com/laravel/pint/issues",
                 "source": "https://github.com/laravel/pint"
             },
-            "time": "2022-07-14T14:50:04+00:00"
+            "time": "2022-07-26T15:32:23+00:00"
         },
         {
             "name": "laravel/sail",
@@ -8044,7 +8086,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "kesmenenver/servicelayer": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
